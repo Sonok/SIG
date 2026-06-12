@@ -8,13 +8,20 @@
 
 ---
 
-## 🧭 The big picture
+## 🧭 The big picture (verified from real candidate reports)
 
 ```
-[R1] Recruiter screen  →  [R2] Live coding  →  [R3] Design & team fit  →  Offer
-     Tue Jun 16             ~1–2 weeks later     after R2
-     (light technical)      (the real test)      (multiple interviews)
+[✅ CodeSignal OA]  →  [R1] Recruiter  →  [R2] 90-min Technical  →  [R3] Final Day  →  Offer
+   DONE                 Tue Jun 16          ~1–2 wks later           after R2
+                        (mostly behavioral) (the real test)          (design + fit)
 ```
+
+**R2 — the 90-min technical (SIG's signature format):**
+1. **Code optimization / refactoring** — they hand you bad code; improve complexity + apply SOLID → `prep/09`
+2. **DSA problem-solving** with follow-ups (binary search / BFS style) → `prep/04`
+3. **OOP class design + project deep-dive** → `prep/09` + `prep/10`
+
+**R3 — final day:** OOP system design (e.g. grocery-store checkout) `prep/09` · programming before a senior eng `prep/04` · project deep-dive `prep/10` · 2× manager behavioral chats `prep/08`.
 
 **Strategy:** Tuesday is mostly behavioral (you've got this). Don't wait for results to start the technical ramp — begin it the day after the screen so you're sharp whenever R2 lands.
 
@@ -77,40 +84,41 @@
 - [ ] `04`: implement **LRU cache** + **order book** from scratch, narrating
 - [ ] 10 min Zetamac warm-up
 
-### ☐ Tue Jun 23 — Concurrency part 1 `~1h`
-- [ ] [`03_concurrency`](prep/03_concurrency.md) §1–6: threads · races · mutexes · deadlock · cond vars
-- [ ] Write the **SPSC ring buffer** by hand
+### ☐ Tue Jun 23 — ⭐ Code optimization & SOLID (R2 CORE) `~1h`
+- [ ] [`09_code_optimization_oop_design`](prep/09_code_optimization_oop_design.md) Part A + B: refactor bad code → better complexity + SOLID
+- [ ] Practice the "correctness → complexity → clarity → design" script aloud
 
 ---
 
-## 📅 PHASE 2 — Performance, Systems & Design (Week of Jun 24)
+## 📅 PHASE 2 — R2 finishers, Performance & Design (Week of Jun 24)
 
-### ☐ Wed Jun 24 — Low latency part 1 `~1h`
-- [ ] [`02_low_latency_performance`](prep/02_low_latency_performance.md): latency table · cache · false sharing · branch prediction
+> ⭐ = directly tested in the 90-min technical round (highest yield). The rest is depth + passion signal for the final round and shows you "get" the actual job.
+
+### ☐ Wed Jun 24 — ⭐ OOP design (R2 CORE) `~1h`
+- [ ] `09` Part C: OOD framework + **grocery-store checkout** in depth + parking lot
+- [ ] Whiteboard the checkout classes out loud (extend it with a new discount type)
+
+### ☐ Thu Jun 25 — ⭐ Project deep-dive (R2 CORE) `~1h`
+- [ ] [`10_project_deep_dive`](prep/10_project_deep_dive.md): lock your **AWS** + **SIF** walk-throughs
+- [ ] Practice the 2-min unprompted version of each, in "I" form, ready to whiteboard
+
+### ☐ Fri Jun 26 — Concurrency `~1h`
+- [ ] [`03_concurrency`](prep/03_concurrency.md) §1–6 + write the **SPSC ring buffer** by hand
+
+### ☐ Sat Jun 27 — Low latency `~1h`
+- [ ] [`02_low_latency_performance`](prep/02_low_latency_performance.md): latency table · cache · false sharing
 - [ ] Read **"How to talk about your AWS work"** — rehearse it aloud
 
-### ☐ Thu Jun 25 — Low latency part 2 `~1h`
-- [ ] `02`: hot-path allocation · NUMA · kernel bypass · measuring p99
-- [ ] Do the `02` Rapid-fire Q&A aloud
-
-### ☐ Fri Jun 26 — Systems & networking `~1h`
-- [ ] [`05_systems_os_networking`](prep/05_systems_os_networking.md): virtual memory · TLB · syscalls
-- [ ] **Nail "UDP multicast vs TCP for market data"** until it's airtight
-
-### ☐ Sat Jun 27 — System design part 1 `~1h`
-- [ ] [`07_system_design_trading`](prep/07_system_design_trading.md): design framework + **order book** deep dive
-- [ ] Walk through the order-book design **out loud**
-
-### ☐ Sun Jun 28 — System design part 2 + quant `~1h`
-- [ ] `07`: feed handler · kill switch · async logger walkthroughs
-- [ ] [`06_probability_ev_mental_math`](prep/06_probability_ev_mental_math.md): 5 problems to stay sharp
+### ☐ Sun Jun 28 — Systems + trading design `~1h`
+- [ ] [`05_systems_os_networking`](prep/05_systems_os_networking.md): nail **UDP multicast vs TCP**
+- [ ] [`07_system_design_trading`](prep/07_system_design_trading.md): **order book** walkthrough aloud
 
 ### ☐ Mon Jun 29 — Mock day `~1h`
-- [ ] Solve **2 medium problems** aloud, timed, as a mock live-coding round
-- [ ] Note weak spots; re-read those sections
+- [ ] One mock **code-optimization** problem + one **DSA** problem, narrated and timed
+- [ ] One mock **OOD** prompt aloud · note weak spots
 
 ### ☐ Tue Jun 30 — Final review `~1h`
-- [ ] Review the **"10 things that clear this interview"** in `00_ROADMAP.md`
+- [ ] Review the **"10 things"** + the **R2 must-knows** below
 - [ ] Self-test checklists at the bottom of each file — anything you can't explain → revisit
 
 ---
@@ -122,6 +130,14 @@
 - [ ] **Teach-back test** — if you can't explain it out loud simply, you don't own it yet
 
 ---
+
+## 🎯 R2 must-knows (the 90-min technical — your next real hurdle)
+
+1. Take ugly code → state its Big-O → improve it → then clean it with **SOLID** (`09`)
+2. Name & apply the **5 SOLID principles** with a quick C++ example each (`09`)
+3. Design the **grocery-store checkout** (or parking lot) OOP system, and extend it without editing old code (Open/Closed) (`09`)
+4. Live-code a **DSA medium** (binary-search/BFS style) in clean C++ while narrating + testing (`04`)
+5. 2-minute **project deep-dive** on AWS + SIF — architecture, key decisions, complexity, hardest bug, in "I" form (`10`)
 
 ## ✅ The 10 must-knows (from `00_ROADMAP.md`)
 

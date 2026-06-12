@@ -50,6 +50,8 @@
 | 06 | `06_probability_ev_mental_math.md` | R1/R3 sprinkles | 🟢 maintain (already strong) |
 | 07 | `07_system_design_trading.md` | R3 | 🟠 high |
 | 08 | `08_behavioral_and_stories.md` | R1 + every round | 🟢 polish |
+| 09 | `09_code_optimization_oop_design.md` | **R2 core** + R3 | 🔴 highest — SIG's signature round |
+| 10 | `10_project_deep_dive.md` | **R2 + R3** | 🔴 high — they WILL ask |
 
 ---
 
